@@ -1,5 +1,7 @@
 import { Header } from '@/components/header'
-import { Card, HomeContainer, Title } from './styles'
+import Image from 'next/image'
+import { Card, HomeContainer, Subtitle, Title } from './styles'
+import CoffeeImage from '@/assets/cafe.png'
 
 export default function Home() {
   return (
@@ -9,13 +11,20 @@ export default function Home() {
         <Card>
           <div>
             <Title>
-              Proteja seu veículo com os melhores alarmes automotivos do mercado
+              Proteja seu veículo com os melhores alarmes automotivos do
+              mercado!
             </Title>
-            <h3>
+            <Subtitle>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
               culpa consectetur nam dolorem adipisci, iste, et facere beatae
-            </h3>
+            </Subtitle>
           </div>
+          <Image
+            src={CoffeeImage}
+            alt="Imagem de café"
+            width={500}
+            height={350}
+          />
         </Card>
       </HomeContainer>
     </>
