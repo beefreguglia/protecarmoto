@@ -1,9 +1,18 @@
+import Image from 'next/image'
+import logoImage from '../../assets/logo.png'
 import { HeaderContainer } from './styles'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <h1>Logo aqui</h1>
+      <div>
+        <Image
+          src={logoImage}
+          width={160}
+          quality={100}
+          alt="Logo protecarmoto"
+        />
+      </div>
     </HeaderContainer>
   )
 }
