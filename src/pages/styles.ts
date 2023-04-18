@@ -1,27 +1,105 @@
-import { styled } from '@/styles'
+import { keyframes, styled } from '@/styles'
+import Image from 'next/image'
+
+const fadeLeft = keyframes({
+  '0%': { opacity: '0', transform: 'translateX(5rem)' },
+  '100%': { opacity: '1', transform: 'translateX(0)' },
+})
+
+const fadeRight = keyframes({
+  '0%': { opacity: '0', transform: 'translateX(-5rem)' },
+  '100%': { opacity: '1', transform: 'translateX(0)' },
+})
 
 export const HomeContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
-  padding: '5rem 8rem',
   maxWidth: '1440px',
   margin: '0 auto',
 })
 
-export const Card = styled('div', {
+export const BannerContainer = styled('div', {
   display: 'flex',
-  justifyContent: 'space-between',
+  width: '100%',
+  padding: '5rem 8rem',
   alignItems: 'center',
-  gap: '5rem',
+  gap: '4rem',
+  justifyContent: 'space-between',
+  background: '$gray800',
+
+  '@media(max-width: 800px)': {
+    padding: '5rem 3rem',
+  },
 })
 
-export const Title = styled('h1', {
-  fontFamily: 'Baloo 2',
-  fontWeight: 'bold',
-  fontSize: '1.75rem',
+export const TitleContainer = styled('div', {
+  maxWidth: '800px',
+  zIndex: '2',
+  animation: `${fadeRight} 400ms`,
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  h2: {
+    color: '$gray100',
+    fontSize: '3rem',
+    textShadow: '1px 1px 1px $red500',
+  },
+  h3: {
+    fontSize: '1.5rem',
+    color: '$gray200',
+    textShadow: '1px 1px 1px $red500',
+    marginTop: '1rem',
+  },
+
+  '@media(max-width: 1300px)': {
+    maxWidth: '100%',
+    h2: {
+      fontSize: '2rem',
+    },
+    h3: {
+      fontSize: '1.3rem',
+    },
+  },
+
+  '@media(max-width: 800px)': {
+    h2: {
+      fontSize: '1.3rem',
+    },
+    h3: {
+      fontSize: '1rem',
+    },
+  },
 })
 
-export const Subtitle = styled('p', {
-  marginTop: '1rem',
-  color: '$gray300',
+export const ImageContainer = styled('div', {
+  zIndex: '2',
+
+  animation: `${fadeLeft} 400ms`,
+  '@media(max-width: 800px)': {
+    display: 'none',
+  },
+})
+
+export const StyledImage = styled(Image, {})
+
+export const PinsContainer = styled('div', {
+  width: '100%',
+  marginTop: '3rem',
+
+  '.firstContainer': {
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    display: 'grid',
+    justifyContent: 'center',
+    gap: '3rem',
+    padding: '0 10%',
+  },
+
+  '.secondContainer': {
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    display: 'grid',
+    justifyContent: 'center',
+    gap: '3rem',
+
+    marginTop: '3rem',
+  },
 })

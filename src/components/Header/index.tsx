@@ -8,7 +8,7 @@ export function Header() {
       <div>
         <Image
           src={logoImage}
-          width={160}
+          width={240}
           quality={100}
           alt="Logo protecarmoto"
         />

@@ -8,7 +8,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    fontFamily: 'Inter',
+    fontFamily: 'Poppins, sans-serif',
     'webkit-font-smoothing': 'antialiased',
     color: '$gray100',
     backgroundColor: '$gray900',
