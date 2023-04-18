@@ -64,16 +64,16 @@ export default function Home() {
       <HomeContainer>
         <PinsContainer>
           <div className="firstContainer">
-            {firstArray.map((pin) => (
-              <Pin.PinRoot key={pin.text}>
+            {firstArray.map((pin, i) => (
+              <Pin.PinRoot time={i + 1} key={pin.text}>
                 <Pin.PinIcon icon={pin.icon} />
                 <Pin.PinText text={pin.text} />
               </Pin.PinRoot>
             ))}
           </div>
           <div className="secondContainer">
-            {secondArray.map((pin) => (
-              <Pin.PinRoot key={pin.text}>
+            {secondArray.map((pin, i) => (
+              <Pin.PinRoot time={i + 5} key={pin.text}>
                 <Pin.PinIcon icon={pin.icon} />
                 <Pin.PinText text={pin.text} />
               </Pin.PinRoot>

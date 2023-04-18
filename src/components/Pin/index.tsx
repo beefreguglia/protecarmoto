@@ -15,10 +15,11 @@ import { PinContainer, PinIconContainer, PinTextContainer } from './styles'
 
 interface PinRootProps {
   children: ReactElement[]
+  time: number
 }
 
-export function PinRoot({ children }: PinRootProps) {
-  return <PinContainer>{children}</PinContainer>
+export function PinRoot({ children, time }: PinRootProps) {
+  return <PinContainer data-time={time}>{children}</PinContainer>
 }
 
 interface PinTextProps {

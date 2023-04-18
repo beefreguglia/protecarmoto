@@ -90,8 +90,11 @@ export const PinsContainer = styled('div', {
     gridTemplateColumns: 'repeat(4, 1fr)',
     display: 'grid',
     justifyContent: 'center',
-    gap: '3rem',
+    columnGap: '3rem',
     padding: '0 10%',
+    '@media(max-width: 1000px)': {
+      gridTemplateColumns: '1fr',
+    },
   },
 
   '.secondContainer': {
@@ -99,7 +102,9 @@ export const PinsContainer = styled('div', {
     display: 'grid',
     justifyContent: 'center',
     gap: '3rem',
-
     marginTop: '3rem',
+    '@media(max-width: 1000px)': {
+      gridTemplateColumns: '1fr',
+    },
   },
 })
