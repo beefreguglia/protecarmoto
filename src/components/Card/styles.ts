@@ -1,4 +1,9 @@
-import { styled } from '@stitches/react'
+import { keyframes, styled } from '@/styles'
+
+const Up = keyframes({
+  '0%': { transform: 'translateY(0)' },
+  '100%': { transform: 'translateY(-1rem)' },
+})
 
 export const CardContainer = styled('div', {
   backgroundColor: '$gray950',
@@ -7,7 +12,6 @@ export const CardContainer = styled('div', {
   borderRadius: 10,
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
   alignItems: 'center',
   maxWidth: '400px',
   cursor: 'pointer',
@@ -23,5 +27,9 @@ export const CardContainer = styled('div', {
 
   p: {
     marginTop: '0.5rem',
+  },
+
+  '&:hover': {
+    animation: `${Up} 300ms ease-in-out forwards`,
   },
 })

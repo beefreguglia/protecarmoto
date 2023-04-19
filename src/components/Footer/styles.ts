@@ -2,7 +2,7 @@ import { styled } from '@/styles'
 
 export const FooterContainer = styled('footer', {
   marginTop: '5rem',
-  padding: '2.5rem',
+  padding: '2.5rem 6rem',
   width: '100%',
   backgroundColor: '$gray950',
 
@@ -19,7 +19,18 @@ export const FooterContainer = styled('footer', {
 })
 
 export const SocialMedias = styled('div', {
-  color: '$red500',
   display: 'flex',
   gap: '1rem',
+
+  '> button': {
+    color: '$red500',
+    backgroundColor: 'transparent',
+    border: 'none',
+    cursor: 'pointer',
+    lineHeight: 0,
+    '&:hover': {
+      transition: 'transform 300ms ease-in-out',
+      transform: 'translateY(-0.5rem)',
+    },
+  },
 })

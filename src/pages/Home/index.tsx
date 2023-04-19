@@ -12,6 +12,7 @@ import {
   HomeContainer,
   PinsContainer,
 } from './styles'
+import { WhatsappButton } from '@/components/WhatsappButton'
 
 interface PinData {
   icon:
@@ -102,6 +103,7 @@ export default function Home() {
           ))}
         </CardsContainer>
       </HomeContainer>
+      <WhatsappButton />
       <Footer />
     </>
   )

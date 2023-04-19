@@ -3,6 +3,7 @@ import { styled } from '@/styles'
 export const HomeContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
 
   '.SeparatorRoot': {
     marginTop: '3rem',
@@ -13,10 +14,6 @@ export const HomeContainer = styled('main', {
     height: '2px',
     width: '60%',
   },
-  '.Separator[data-orientation="horizontal"]': {
-    height: '2px',
-    width: '60%',
-  },
   '.SeparatorRoot[data-orientation="vertical"]': {
     height: '100%',
     width: '1px',
@@ -24,7 +21,7 @@ export const HomeContainer = styled('main', {
 })
 
 export const BannerContainer = styled('div', {
-  width: '100%',
+  width: '100vw',
   height: '600px',
   position: 'relative',
 })
@@ -52,7 +49,7 @@ export const PinsContainer = styled('div', {
       gridTemplateColumns: 'repeat(5, 1fr)',
       display: 'grid',
       justifyContent: 'center',
-      gap: '3rem',
+      gap: '1rem',
       marginTop: '3rem',
       '@media(max-width: 1000px)': {
         gridTemplateColumns: '1fr',
@@ -70,6 +67,5 @@ export const CardsContainer = styled('div', {
 
   '@media(max-width: 1000px)': {
     flexDirection: 'column',
-    padding: '0 2rem',
   },
 })

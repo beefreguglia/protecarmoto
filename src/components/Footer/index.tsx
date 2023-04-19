@@ -1,9 +1,4 @@
-import {
-  FacebookLogo,
-  IconContext,
-  InstagramLogo,
-  WhatsappLogo,
-} from 'phosphor-react'
+import { FacebookLogo, IconContext, InstagramLogo } from 'phosphor-react'
 import { FooterContainer, SocialMedias } from './styles'
 
 export function Footer() {
@@ -19,9 +14,12 @@ export function Footer() {
               weight: 'fill',
             }}
           >
-            <WhatsappLogo />
-            <InstagramLogo />
-            <FacebookLogo />
+            <button type="button">
+              <InstagramLogo />
+            </button>
+            <button type="button">
+              <FacebookLogo />
+            </button>
           </IconContext.Provider>
         </SocialMedias>
       </div>
