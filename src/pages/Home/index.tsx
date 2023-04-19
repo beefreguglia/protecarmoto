@@ -1,18 +1,16 @@
-import logoImage from '@/assets/logo.png'
-import { Header } from '@/components/Header'
-import * as Pin from '@/components/Pin'
-
+import praMotoImage from '@/assets/pramotocard.png'
+import proCarImage from '@/assets/procarcard.png'
 import { Card } from '@/components/Card'
 import { Footer } from '@/components/Footer'
-import { StaticImageData } from 'next/image'
+import { Header } from '@/components/Header'
+import * as Pin from '@/components/Pin'
+import * as Separator from '@radix-ui/react-separator/dist'
+import Image, { StaticImageData } from 'next/image'
 import {
   BannerContainer,
   CardsContainer,
   HomeContainer,
-  ImageContainer,
   PinsContainer,
-  StyledImage,
-  TitleContainer,
 } from './styles'
 
 interface PinData {
@@ -52,15 +50,16 @@ const products: Product[] = [
     name: 'Protecar',
     description:
       'O Protecar é o dispositivo definitivo para garantir a segurança do seu carro!',
-    image: logoImage,
+    image: proCarImage,
   },
   {
     name: 'Pramoto',
     description:
       'O Pramoto é o dispositivo definitivo para garantir a segurança do sua moto!',
-    image: logoImage,
+    image: praMotoImage,
   },
 ]
+
 export default function Home() {
   const firstArray = pins.slice(0, 4)
   const secondArray = pins.slice(4)
@@ -68,41 +67,35 @@ export default function Home() {
     <>
       <Header />
       <BannerContainer>
-        <TitleContainer>
-          <h2>Acelere com segurança,</h2>
-          <h3>
-            Proteja seu veículo com a combinação perfeita de tecnologia avançada
-            e eficiência máxima.
-          </h3>
-        </TitleContainer>
-        <ImageContainer>
-          <StyledImage
-            src={logoImage}
-            width={400}
-            quality={100}
-            alt="Logo protecarmoto"
-          />
-        </ImageContainer>
+        <Image
+          src="/bannersite.png"
+          quality={100}
+          alt="Logo protecarmoto"
+          fill
+        />
       </BannerContainer>
       <HomeContainer>
         <PinsContainer>
-          <div className="firstContainer">
-            {firstArray.map((pin, i) => (
-              <Pin.PinRoot time={i + 1} key={pin.text}>
-                <Pin.PinIcon icon={pin.icon} />
-                <Pin.PinText text={pin.text} />
-              </Pin.PinRoot>
-            ))}
-          </div>
-          <div className="secondContainer">
-            {secondArray.map((pin, i) => (
-              <Pin.PinRoot time={i + 5} key={pin.text}>
-                <Pin.PinIcon icon={pin.icon} />
-                <Pin.PinText text={pin.text} />
-              </Pin.PinRoot>
-            ))}
+          <div>
+            <div className="firstContainer">
+              {firstArray.map((pin, i) => (
+                <Pin.PinRoot time={i + 1} key={pin.text}>
+                  <Pin.PinIcon icon={pin.icon} />
+                  <Pin.PinText text={pin.text} />
+                </Pin.PinRoot>
+              ))}
+            </div>
+            <div className="secondContainer">
+              {secondArray.map((pin, i) => (
+                <Pin.PinRoot time={i + 5} key={pin.text}>
+                  <Pin.PinIcon icon={pin.icon} />
+                  <Pin.PinText text={pin.text} />
+                </Pin.PinRoot>
+              ))}
+            </div>
           </div>
         </PinsContainer>
+        <Separator.Root className="SeparatorRoot" />
         <CardsContainer>
           {products.map((product) => (
             <Card key={product.name} product={product} />

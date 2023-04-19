@@ -10,6 +10,11 @@ export const CardContainer = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   maxWidth: '400px',
+  cursor: 'pointer',
+
+  '.image': {
+    marginTop: '-120px',
+  },
 
   h2: {
     marginTop: '2rem',

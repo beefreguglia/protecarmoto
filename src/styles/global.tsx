@@ -12,6 +12,7 @@ export const globalStyles = globalCss({
     'webkit-font-smoothing': 'antialiased',
     color: '$gray100',
     backgroundColor: '$gray900',
+    width: '100vw',
     '&::-webkit-scrollbar': {
       width: '10px',
     },

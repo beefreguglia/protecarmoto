@@ -15,7 +15,9 @@ export function Card({ product }: CardProps) {
   const { image, name, description } = product
   return (
     <CardContainer>
-      <Image width={200} height={200} src={image} alt={name} />
+      <div className="image">
+        <Image width={400} height={400} src={image} alt={name} />
+      </div>
       <div>
         <h2>{name}</h2>
         <p>{description}</p>
