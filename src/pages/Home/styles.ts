@@ -84,13 +84,13 @@ export const StyledImage = styled(Image, {})
 
 export const PinsContainer = styled('div', {
   width: '100%',
-  marginTop: '3rem',
+  marginTop: '5rem',
 
   '.firstContainer': {
     gridTemplateColumns: 'repeat(4, 1fr)',
     display: 'grid',
     justifyContent: 'center',
-    columnGap: '3rem',
+    gap: '3rem',
     padding: '0 10%',
     '@media(max-width: 1000px)': {
       gridTemplateColumns: '1fr',
@@ -106,5 +106,18 @@ export const PinsContainer = styled('div', {
     '@media(max-width: 1000px)': {
       gridTemplateColumns: '1fr',
     },
+  },
+})
+
+export const CardsContainer = styled('div', {
+  marginTop: '5rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '5rem',
+
+  '@media(max-width: 1000px)': {
+    flexDirection: 'column',
+    padding: '0 2rem',
   },
 })
