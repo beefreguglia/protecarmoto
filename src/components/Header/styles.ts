@@ -6,4 +6,5 @@ export const HeaderContainer = styled('header', {
   justifyContent: 'center',
   padding: '2.5rem',
   color: '$red500',
+  backgroundColor: '$gray900',
 })
