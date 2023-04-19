@@ -43,7 +43,7 @@ export const PinContainer = styled('div', {
 
 export const PinTextContainer = styled('p', {
   color: '$red500',
-  fontSize: '1.5rem',
+  fontSize: '1rem',
   fontWeight: '600',
   textAlign: 'center',
 })

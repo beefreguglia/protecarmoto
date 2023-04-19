@@ -47,7 +47,7 @@ export function PinIcon({ icon }: PinIconProps) {
   return (
     <IconContext.Provider
       value={{
-        size: 64,
+        size: 32,
         mirrored: false,
       }}
     >
