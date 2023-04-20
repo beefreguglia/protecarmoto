@@ -1,6 +1,7 @@
 import praMotoImage from '@/assets/pramotocard.png'
 import proCarImage from '@/assets/procarcard.png'
-import bannerImage from '@/assets/bannersite.png'
+import bannerBackgroundImage from '@/assets/bannersite.png'
+import bannerTextImage from '@/assets/bannerText.svg'
 import { Card } from '@/components/Card'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -14,6 +15,7 @@ import {
   PinsContainer,
 } from './styles'
 import { WhatsappButton } from '@/components/WhatsappButton'
+import { useEffect, useState } from 'react'
 
 interface PinData {
   icon:
@@ -65,18 +67,51 @@ const products: Product[] = [
 export default function Home() {
   const firstArray = pins.slice(0, 4)
   const secondArray = pins.slice(4)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    if (window && window.innerWidth <= 400) {
+      setIsMobile(true)
+    }
+  }, [])
+
   return (
     <>
       <Header />
       <BannerContainer>
         <Image
-          src={bannerImage}
+          src={bannerBackgroundImage}
           quality={100}
-          alt="Logo protecarmoto"
+          alt=""
           fill
           priority
           className="banner"
         />
+        {isMobile ? (
+          <div>
+            <Image
+              src={bannerTextImage}
+              quality={100}
+              width={250}
+              height={250}
+              alt="banner text"
+              priority
+              className="bannerText"
+            />
+          </div>
+        ) : (
+          <div>
+            <Image
+              src={bannerTextImage}
+              quality={100}
+              width={400}
+              height={400}
+              alt="banner text"
+              priority
+              className="bannerText"
+            />
+          </div>
+        )}
       </BannerContainer>
       <HomeContainer>
         <PinsContainer>

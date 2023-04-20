@@ -26,6 +26,28 @@ export const BannerContainer = styled('div', {
   position: 'relative',
   display: 'block',
 
+  '> div': {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    maxWidth: '1440px',
+    margin: 'auto',
+
+    '@media(max-width: 800px)': {
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+
+    '@media(max-width: 400px)': {
+      padding: '0',
+    },
+  },
+
   '.banner': {
     objectFit: 'cover',
   },
