@@ -1,5 +1,4 @@
 import { styled } from '@/styles'
-import Image from 'next/image'
 
 export const HomeContainer = styled('main', {
   display: 'flex',
@@ -25,12 +24,10 @@ export const BannerContainer = styled('div', {
   width: '100%',
   height: '600px',
   position: 'relative',
-  objectFit: 'contain',
-  objectPosition: 'center',
+  display: 'block',
 
-  [`& ${Image}`]: {
-    position: 'absolute',
-    opacity: 0,
+  '.banner': {
+    objectFit: 'cover',
   },
 })
 

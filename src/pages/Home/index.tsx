@@ -69,7 +69,14 @@ export default function Home() {
     <>
       <Header />
       <BannerContainer>
-        <Image src={bannerImage} quality={100} alt="Logo protecarmoto" fill />
+        <Image
+          src={bannerImage}
+          quality={100}
+          alt="Logo protecarmoto"
+          fill
+          priority
+          className="banner"
+        />
       </BannerContainer>
       <HomeContainer>
         <PinsContainer>
