@@ -1,5 +1,6 @@
 import praMotoImage from '@/assets/pramotocard.png'
 import proCarImage from '@/assets/procarcard.png'
+import bannerImage from '@/assets/bannersite.png'
 import { Card } from '@/components/Card'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -68,12 +69,7 @@ export default function Home() {
     <>
       <Header />
       <BannerContainer>
-        <Image
-          src="/bannersite.png"
-          quality={100}
-          alt="Logo protecarmoto"
-          fill
-        />
+        <Image src={bannerImage} quality={100} alt="Logo protecarmoto" fill />
       </BannerContainer>
       <HomeContainer>
         <PinsContainer>

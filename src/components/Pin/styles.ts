@@ -11,6 +11,7 @@ export const PinContainer = styled('div', {
   alignItems: 'center',
   gap: '0.2rem',
   width: '100%',
+  maxHeight: '600px',
   padding: '0 2rem',
 
   '&[data-time="1"]': {

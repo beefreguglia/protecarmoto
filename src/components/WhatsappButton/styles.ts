@@ -15,4 +15,6 @@ export const WhatsappButtonContainer = styled('button', {
   lineHeight: 0,
   padding: '0.5rem',
   border: 'none',
+
+  '&:hover': {},
 })
