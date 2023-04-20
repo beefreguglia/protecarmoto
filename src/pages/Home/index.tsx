@@ -49,7 +49,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    name: 'Protecar',
+    name: 'Procar',
     description:
       'O Protecar é o dispositivo definitivo para garantir a segurança do seu carro!',
     image: proCarImage,
