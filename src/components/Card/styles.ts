@@ -14,10 +14,12 @@ export const CardContainer = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   maxWidth: '400px',
-  cursor: 'pointer',
 
   '.image': {
     marginTop: '-120px',
+    '&:hover': {
+      animation: `${Up} 300ms ease-in-out forwards`,
+    },
   },
 
   h2: {
@@ -29,7 +31,24 @@ export const CardContainer = styled('div', {
     marginTop: '0.5rem',
   },
 
-  '&:hover': {
-    animation: `${Up} 300ms ease-in-out forwards`,
+  button: {
+    marginTop: '1rem',
+    padding: '0.7rem',
+    width: '60%',
+    border: 'none',
+    cursor: 'pointer',
+    backgroundColor: '$yellow500',
+    borderRadius: '7px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    fontWeight: 'bold',
+    fontSize: '1rem',
+
+    '&:hover': {
+      opacity: '0.8',
+      transition: 'opacity 300ms',
+    },
   },
 })

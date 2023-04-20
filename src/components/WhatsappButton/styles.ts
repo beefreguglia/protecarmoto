@@ -10,11 +10,13 @@ export const WhatsappButtonContainer = styled('button', {
   justifyContent: ' center',
   borderRadius: '10px',
   cursor: 'pointer',
-  color: '$red500',
+  color: '$green500',
   backgroundColor: '$gray700',
   lineHeight: 0,
   padding: '0.5rem',
   border: 'none',
-
-  '&:hover': {},
+  '&:hover': {
+    backgroundColor: '$gray950',
+    transition: 'background-color 300ms',
+  },
 })

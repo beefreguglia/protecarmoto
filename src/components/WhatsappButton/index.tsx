@@ -4,7 +4,7 @@ import { WhatsappButtonContainer } from './styles'
 export function WhatsappButton() {
   return (
     <WhatsappButtonContainer>
-      <WhatsappLogo size={32} />
+      <WhatsappLogo size={48} />
     </WhatsappButtonContainer>
   )
 }

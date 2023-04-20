@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import { CardContainer } from './styles'
+import { ArrowRight } from 'phosphor-react'
 
 interface Product {
   image: string | StaticImageData
@@ -22,6 +23,9 @@ export function Card({ product }: CardProps) {
         <h2>{name}</h2>
         <p>{description}</p>
       </div>
+      <button>
+        Saiba mais <ArrowRight weight="bold" />
+      </button>
     </CardContainer>
   )
 }

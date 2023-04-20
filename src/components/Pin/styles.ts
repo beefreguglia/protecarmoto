@@ -80,7 +80,7 @@ export const PinContainer = styled('div', {
 })
 
 export const PinTextContainer = styled('p', {
-  color: '$red500',
+  color: '$gray100',
   fontSize: '1rem',
   fontWeight: '600',
   textAlign: 'center',

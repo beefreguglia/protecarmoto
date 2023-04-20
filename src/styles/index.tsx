@@ -23,7 +23,9 @@ export const {
       gray800: '#202024',
       gray900: '#121214',
       gray950: '#09090A',
-      red500: '#D52423',
+      red500: '#ff0101',
+      yellow500: '#ffff00',
+      green500: '#48BB78',
     },
   },
 })
